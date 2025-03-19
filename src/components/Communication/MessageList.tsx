@@ -10,7 +10,7 @@ interface MessageListProps {
   onSelectConversation: (conversation: Conversation, otherUser: UserType) => void;
 }
 
-const MessageList = ({ onSelectConversation }: MessageListProps) => {
+export const MessageList = ({ onSelectConversation }: MessageListProps) => {
   const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   
@@ -172,5 +172,3 @@ const MessageList = ({ onSelectConversation }: MessageListProps) => {
     </div>
   );
 };
-
-export default MessageList;
